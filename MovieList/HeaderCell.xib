@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCell" id="U6b-Vx-4bR" customClass="HeaderCell" customModule="MovieList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb2-Qz-U9V">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-bf-6bc">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="fIR-wC-Kzy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-wX-LLc">
+                            <rect key="frame" x="225" y="10" width="80" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="2Ms-e6-yGF"/>
+                                <constraint firstAttribute="height" constant="31" id="YZc-7H-XgO"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="CLose"/>
+                            <connections>
+                                <action selector="didTap:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="5hh-cy-s3N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Ra7-wX-LLc" firstAttribute="top" secondItem="zb2-Qz-U9V" secondAttribute="top" constant="10" id="CBX-0r-gb5"/>
+                        <constraint firstItem="cif-bf-6bc" firstAttribute="top" secondItem="zb2-Qz-U9V" secondAttribute="top" id="Ey8-T6-kM1"/>
+                        <constraint firstItem="cif-bf-6bc" firstAttribute="leading" secondItem="zb2-Qz-U9V" secondAttribute="leading" id="RML-rB-4b0"/>
+                        <constraint firstAttribute="bottom" secondItem="cif-bf-6bc" secondAttribute="bottom" id="dIj-gA-QVY"/>
+                        <constraint firstAttribute="trailing" secondItem="Ra7-wX-LLc" secondAttribute="trailing" constant="15" id="k9G-aa-bvb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="zb2-Qz-U9V" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="8bv-kQ-Zzf"/>
+                <constraint firstItem="zb2-Qz-U9V" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="GMW-2c-YjI"/>
+                <constraint firstAttribute="bottom" secondItem="zb2-Qz-U9V" secondAttribute="bottom" id="Vyd-hm-4IF"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="zb2-Qz-U9V" secondAttribute="trailing" id="fEA-30-f5f"/>
+            </constraints>
+            <connections>
+                <outlet property="lbTitle" destination="cif-bf-6bc" id="zAe-o6-FT1"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="132"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
